@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/FL1"
+        android:layout_width="0dp"
+        android:layout_height="330dp"
+        android:background="@color/teal_200"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            android:text="CALC-ULA"
+            android:textColor="#ffffff"
+            android:textSize="42sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="190dp"
+            android:padding="8dp"
+            android:text="Calculations Made Simple!"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="italic" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button1LF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="8dp"
+        android:text="Lorentz Factor"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:backgroundTint="@color/design_default_color_on_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FL1" />
+
+    <Button
+        android:id="@+id/button2SF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="SPI Factor"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:backgroundTint="@color/design_default_color_on_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1LF" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/design_default_color_on_primary"
+        android:padding="8dp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SPI" />
+
+    <TextView
+        android:id="@+id/SPI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/design_default_color_on_primary"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        android:text="TextView"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2SF" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_btn"
+        android:text="RESET"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:backgroundTint="#390542"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <LinearLayout
+        android:id="@+id/L2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/teal_200"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Lorentz Factor"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="311dp"
+            android:layout_height="158dp"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/lorentz" />
+
+        <TextView
+            android:id="@+id/intial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#000000"
+            android:padding="8dp"
+            android:text="Enter Value of v (Speed of moving observer) to Calculate Larentz factor (γ):"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/cValue"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:background="#ffffff"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="Speed in m/s"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:textColorHint="#636363"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/bCalc"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_btn"
+            android:padding="8dp"
+            android:text="Calculate"
+            app:backgroundTint="#696969" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:background="#ffffff"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_btn"
+            android:text="Clear"
+            app:backgroundTint="#696969" />
+
+        <Button
+            android:id="@+id/PSbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_btn"
+            android:padding="8dp"
+            android:text="Practice Session"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:backgroundTint="#390542" />
+
+        <Button
+            android:id="@+id/backbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_btn"
+            android:text=" BACK TO HOMESCREEN"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            app:backgroundTint="#390542" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/L3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/teal_200"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:text="Practice Session"
+            android:textColor="#000000"
+            android:textSize="34sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/cValue2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#ffffff"
+            android:ems="10"
+            android:hint="Enter Value of C"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#3C3A3A" />
+
+        <EditText
+            android:id="@+id/lValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#ffffff"
+            android:ems="10"
+            android:hint="Enter Calculated Lorentz Value"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#3C3A3A"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/checkbtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/rounded_btn"
+            android:text="Submit"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:backgroundTint="#2B2A2A" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#000000"
+            android:padding="8dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_btn"
+            android:text="RESET"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:backgroundTint="#2B2A2A" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_btn"
+            android:text="BACK"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:backgroundTint="#390542" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
